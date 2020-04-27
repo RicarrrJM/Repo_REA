@@ -1,0 +1,20 @@
+crear una carpeta donde hacer las pruebas -> mkdir git_1_4_2020
+nos movemos a la carpeta -> cd git_1_4_2020
+git status -> dice que no hay nada de git en esta carpeta
+creamos nuevos ficheros -> touch fichero1.txt fichero2.txt
+git status -> dice que aun no hay nada de git en esta carpeta
+inizializo el repositorio -> git init
+listo los ficheros para ver los ficheros ocultos creados -> ls -la
+git status -> dice que los ficheros están sin seguimiento (unrtacked)
+añadimos al fichero1 para ser controlado -> git add fichero1.txt
+git status -> dice que hay cambios para ser confirmados y que hay un fichero (fichero2) que sigue sin seguimiento
+
+(con git add /carpeta añade todo lo que haya en una carpeta dentro del directorio)
+
+hago cambios en fichero 1 -> gedit fichero1.txt
+git status -> indica los cambios a ser confirmados, los archivos desactualizados y los no restreados
+añadimos de nuevo fichero1.txt para que pille la modificación -> git add fichero1.txt
+git status -> ya no indica que hay nada desactualizado
+hacemos commit -> git commit -m "Primer comit"
+git status -> ahora solo salen los ficheros no rastreados
+git log -> aparecen los mensajes de todos los commit
